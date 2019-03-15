@@ -60,9 +60,13 @@ const buildProperties = (suite) => {
 }
 
 const extactMessage = (thing) => {
+
   if (typeof thing === 'string') return
   thing.message = ''
-  if (thing['_']) {
+  if (thing['$'] && thing['$'].message){
+    thing.message = thing['$'].message
+  }
+  else if (thing['_']) {
     thing.message = thing['_']
     delete thing['_']
   }

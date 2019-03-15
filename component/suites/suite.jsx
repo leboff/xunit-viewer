@@ -48,6 +48,7 @@ let Suite = ({
         uuid={test._uuid}
         status={test.status}
         name={test.name}
+        cname={test.classname}
         message={test.message}
         raw={test.raw}
         time={test.time}
